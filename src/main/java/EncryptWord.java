@@ -1,5 +1,5 @@
 // Encrypt word when A=F, Input: Apple, Output: Fuuqj
-public class Encryption {
+public class EncryptWord {
     public static void main(String[] args) {
         String word = "Apple";
         String encryptedWord = "";
