@@ -1,29 +1,16 @@
-//Encrypt word when A=E
-//Input: Apple
-public class EncryptWord {
+// Encrypt word when A=F, Input: Apple, Output: Fuuqj
+public class Encryption {
     public static void main(String[] args) {
         String word = "Apple";
-        String s1 = "";
+        String encryptedWord = "";
         for (int i = 0; i < word.length(); i++) {
-            char ch = word.charAt(i);
-            switch (ch) {
-                case 'A':
-                    s1 = s1 + 'F';
-                    break;
-                case 'p':
-                    s1 = s1 + 'u';
-                    break;
-                case 'l':
-                    s1 = s1 + 'q';
-                    break;
-                case 'e':
-                    s1 = s1 + 'j';
-                    break;
-                default:
-                    s1 = s1 + ch;
-                    break;
-            }
+            char currentChar = word.charAt(i);
+            int asciiValue = (int) currentChar;
+            asciiValue = asciiValue + 5;
+            char encryptedChar = (char) asciiValue;
+            encryptedWord = encryptedWord + encryptedChar;
         }
-        System.out.println("The Encrypted word is: " + s1);
+
+        System.out.println("Encrypted word: " + encryptedWord);
     }
 }
